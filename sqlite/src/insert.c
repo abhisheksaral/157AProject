@@ -943,6 +943,20 @@ void sqlite3Insert(
       }
     }
     if( nColumn!=(pTab->nCol-nHidden) ){
+
+      printf("Metadata help: %s{", pTab->zName);
+
+      for (int MYi = 0; MYi < pTab->nCol; MYi++){
+        
+        printf("%s", pTab->aCol[MYi].zName);
+
+        if ( MYi < pTab->nCol - 1) {
+          printf(",");
+        }
+      } 
+      
+      printf("}\n");
+
       sqlite3ErrorMsg(pParse, 
          "table %S has %d columns but %d values were supplied",
          pTabList, 0, pTab->nCol-nHidden, nColumn);
