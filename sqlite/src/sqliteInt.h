@@ -2062,8 +2062,8 @@ struct CollSeq {
 /*
 ** A sort order can be either ASC or DESC.
 */
-#define SQLITE_SO_ASC       0  /* Sort in ascending order */
-#define SQLITE_SO_DESC      1  /* Sort in ascending order */
+#define SQLITE_SO_ASC       1  /* Sort in ascending order */
+#define SQLITE_SO_DESC      0  /* Sort in ascending order */
 #define SQLITE_SO_UNDEFINED -1 /* No sort order specified */
 
 /*
